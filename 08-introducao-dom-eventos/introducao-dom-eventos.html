@@ -104,23 +104,40 @@
         <p><small>Limite máximo de caracteres: <b>100</b></small></p>
         <textarea name="mensagem" id="mensagem" maxlength="100"></textarea>
         <p>Caracteres <span id="contador">0</span></p>
-
+        <p>Restantes <span id="regressivo">100</span></p>
 
         <hr>
 
         <h2>4 - Detectar teclas</h2>
         <p>Abra o console e pressione teclas.</p>
+        <p id="tecla"> Tecla pressionada: <kbd></kbd></p>
 
 
         <hr>
 
         <h2>5 - Lista de tarefas</h2>
-
+        <input type="text" name="tarefas" id="tarefas">
+        <button id="adicionar">Adicionar</button>
+        <ul id="lista"></ul>
 
         <hr>
 
         <h2>6 - Envio de formulário</h2>
-
+        <form action="" method="post">
+            <p>
+                <label for="nome">nome</label>
+                <input type="text" name="nome" id="" required>
+            </p>
+            <p>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="" required>
+            </p>
+            <p>
+                <label for="idade">Idade</label>
+                <input type="number" name="idade" id="">
+            </p>
+            <button type="submit">Enviar</button>
+        </form>
 
         <hr>
 
