@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções CSS</title>
+
+    <style>
+        body {
+            background-color: rgb(0, 0, 29);
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        h1 {
+            color: rgb(255, 106, 255);
+            text-align: center;
+            text-shadow: 0px 0px 20px #fff;
+        }
+
+        h2 {
+            text-decoration: underline;
+
+        }
+
+        .box {
+            height: 60px;
+            align-items: center;
+            border-radius: 8px;
+            margin-top: 15px;
+            margin-top: 15px;
+            justify-content: center;
+            display: flex;
+            font-weight: bold;
+        }
+
+        .card {
+            margin: 5px;
+            border: 1px solid #6b6b6b;
+            border-radius: 4px;
+            padding: 10px;
+
+            /* min() */
+            .min-box {
+                background-color: rgb(51, 177, 51);
+                width: min(500px, 90%);
+            }
+
+            .min-box.fonte {
+                background-color: rgb(51, 177, 51);
+                font-size: min(5vw, 40px);
+            }
+
+            /* max() */
+
+            .max-box {
+                background-color: rgb(96, 172, 172);
+                width: max(300px, 50%);
+            }
+
+            .max-box.fonte {
+                background-color: rgb(96, 172, 172);
+                font-size: max(18px, 2vw);
+            }
+
+            /* calc() */
+            .calc-box {
+                background-color: rgb(141, 132, 1);
+                width: calc(100% - 200px);
+            }
+
+            .calc-box.altura {
+                background-color: rgb(141, 132, 1);
+                height: calc(100vh - 80px);
+            }
+
+            /* clamp() */
+            .clamp-box.fonte {
+                background-color: rgb(163, 6, 6);
+                font-size: clamp(16px, 5vw, 40px);
+            }
+
+            .clamp-box.largura {
+                background-color: rgb(163, 6, 6);
+                width: clamp(300px, 80%, 1200px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Funções de CSS</h1>
+
+    <div class="card">
+        <h2>min()</h2>
+        <p>O min() no CSS serve para pegar o menor valor entre os valores que você colocou.</p>
+        <p>É como se o CSS comparasse os números e escolhesse automaticamente o menor deles.</p>
+        <div class="box min-box">width: min(500px, 90%)</div>
+        <div class="box min-box fonte">font-size: min(5vw, 40px);</div>
+    </div>
+    <div class="card">
+        <h2>max()</h2>
+        <p>O max() no CSS faz o contrário do min().</p>
+        <p>Ele serve para pegar o maior valor entre os valores que você colocou.</p>
+        <div class="box max-box">width: max(300px, 50%);</div>
+        <div class="box max-box fonte">font-size: max(18px, 2vw);</div>
+    </div>
+    <div class="card">
+        <h2>calc()</h2>
+        <p>O calc() no CSS serve para fazer cálculos diretamente no CSS.</p>
+        <p>Com ele você consegue:</p>
+        <ul>
+            <li>somar (+)</li>
+            <li>subtrair (-)</li>
+            <li>multiplicar (*)</li>
+            <li>dividir (/)</li>
+        </ul>
+        <div class="box calc-box">width: calc(100% - 200px);</div>
+        <div class="box calc-box altura">height: calc(100vh - 80px);</div>
+    </div>
+    <div class="card">
+        <h2>clamp()</h2>
+        <p>O clamp() no CSS serve para definir:</p>
+        <ul>
+            <li>um valor mínimo</li>
+            <li>um valor ideal</li>
+            <li>um valor máximo</li>
+        </ul>
+        <p>Ele é muito usado em responsividade, principalmente para fontes e tamanhos.</p>
+        <div class="box clamp-box fonte">font-size: clamp(16px, 5vw, 40px);</div>
+        <p>Isso significa:</p>
+        <ul>
+            <li>nunca menor que 16px</li>
+            <li>tenta usar 5vw</li>
+            <li>nunca maior que 40px</li>
+        </ul>
+
+        <p>Largura:</p>
+        <div class="box clamp-box largura">width: clamp(300px, 80%, 1200px);</div>
+    </div>
+</body>
+
+</html>

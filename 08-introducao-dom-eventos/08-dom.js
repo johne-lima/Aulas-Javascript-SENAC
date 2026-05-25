@@ -149,3 +149,54 @@ botaoAdicionar.addEventListener('click', () => {
 inputTarefa.addEventListener('keyup', (e) => {
     if(event.key === 'Enter') botaoAdicionar.click()
 })
+
+// Exemplo 06
+const formExemplo06 = document.querySelector('#exemplo06')
+const inputNome = document.querySelector('#nome')
+const inputIdade = document.querySelector('#idade')
+const pSaida = document.querySelector('#saida')
+
+// Detectar o acionamento do formulário: evento submit
+formExemplo06.addEventListener('submit', (e) => {
+    e.preventDefault() // Anulando o comportamento padrão do formulário
+    
+    // Capturando os dados digitados
+    const nome = inputNome.value.trim()
+    const idade = Number(inputIdade.value) 
+    
+    // Validações dos campos
+    if (nome === '') {
+        pSaida.textContent = 'Por favor, preencha o nome'
+        pSaida.style.color = 'red'
+        return
+    }
+
+    if(isNaN(idade) || idade < 0 || idade > 120 || idade == '') {
+        pSaida.textContent = 'Por favor, preencha a idade entre 0 e 120'
+        pSaida.style.color = 'purple'
+        return
+    }
+    
+    pSaida.textContent = `Olá ${nome}, você tem ${idade} anos! Seus dados foram enviados!`
+    pSaida.style.color = 'blue'
+
+    formExemplo06.reset() // reset (limpeza) dos campos
+    inputNome.focus() // devolvendo o cursor (foco) ao primeiro campo
+})
+
+
+// Exemplo 07
+const inputSenha = document.querySelector('#senha')
+const botaoMostrar = document.querySelector('#mostrar')
+
+// Ao pressionar o botão
+botaoMostrar.addEventListener('pointerdown', () => {
+    inputSenha.type = 'text'
+    botaoMostrar.textContent = '🙈 Ocultar'
+})
+
+// Ao "soltar" ou liberar o botão
+botaoMostrar.addEventListener('mouseup', () => {
+    inputSenha.type = 'password'
+        botaoMostrar.textContent = '👁️ Mostrar senha'
+})
