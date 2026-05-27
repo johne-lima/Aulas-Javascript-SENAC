@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sintaxe geral do JS</title>
-</head>
-<body>
-    <h1>Começando com JavaScript</h1>
-    <p><b>Importante:</b> JavaScript <mark>NÃO É</mark> Java!</p>
-    <p>Quer abreviar? Pode chamar de <b>JS</b>.</p>
-
-<script>
-    // Comentário de UMA LINHA (CTRL ;)
+// Comentário de UMA LINHA (CTRL ;)
     /* Comentário de
     múltiplas linhas (SHIFT ALT A) */
 
@@ -73,10 +60,3 @@
     // TEMPLATE STRING/LITERAL (crase ou acento grave ``)
     // Atenção: segure o SHIFT e aperte 2 vezes o botão do acento
     console.log(`O produto ${periferico} custa R$ ${preco} reais.`);   
-    
-
-</script>
-
-
-</body>
-</html>
